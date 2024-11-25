@@ -1,0 +1,192 @@
+body {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan konten utama berada di antara navbar dan footer */
+}
+
+.navbar, .footer {
+    background-color: transparent; /* Transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    transition: background-color 0.3s ease; /* Transisi untuk perubahan warna */
+    z-index: 1;
+}
+
+.navbar.scrolled, .footer.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Warna navbar saat digulir */
+}
+
+.nav-link, .footer-link {
+    color: white !important; /* Warna teks link */
+}
+
+.nav-link:hover, .footer-link:hover {
+    color: #FFD700 !important; /* Warna teks saat hover */
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("cinematic.mp4");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 60px;
+}
+
+.nav-item {
+    transition: transform 0.2s, box-shadow 0.2s; /* Tambahkan transisi untuk box-shadow */
+}
+
+.nav-item:active {
+    transform: scale(0.95); /* Efek skala saat diklik */
+}
+
+.nav-link {
+    font-size: 1.5rem; /* Ukuran font untuk semua link */
+    color: white; /* Mengubah warna teks menjadi putih */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.nav-link.about-me {
+    font-size: 1.5rem; /* Ukuran font yang lebih besar untuk About Me */
+}
+
+
+/* Outline saat hover */
+.nav-link:hover {
+    box-shadow: none; /* Outline putih saat hover */
+}
+
+/* Outline saat diklik */
+.nav-link:active {
+    box-shadow: none; /* Outline lebih tebal saat diklik */
+}
+
+
+.dropdown-menu {
+    display: none; /* Sembunyikan dropdown secara default */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transisi untuk opacity dan transform */
+    transform: translateY(-10px); /* Pindahkan dropdown sedikit ke atas */
+}
+
+.dropdown-menu {
+    background-color: transparent;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown.show .dropdown-menu {
+    display: block; /* Tampilkan dropdown saat aktif */
+    opacity: 1; /* Ubah opacity menjadi 1 */
+    transform: translateY(0); /* Kembalikan ke posisi normal */
+}
+
+/* Gaya untuk konten */
+.container {
+    text-align: justify; /* Pusatkan teks */
+    background-color: transparent;
+    flex: 1; /* Membuat konten utama mengisi ruang yang tersisa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    margin-bottom: 60px;
+}
+.chart-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+#background-img {
+    position: fixed;
+    top: -11.5%;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Memastikan video menutupi seluruh area */
+    z-index: -1; /* Menempatkan video di belakang overlay */
+}    
+
+.img-fluid {
+    max-width: 100%; /* Responsif */
+    height: auto; /* Mempertahankan rasio aspek */
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.bar {
+    background-color: #4d4d4d;
+    height: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+.bar-1 { width: 40%; }
+.bar-2 { width: 50%; }
+.bar-3 { width: 60%; }
+.label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    margin-right: 10px;
+}
+.value {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    color: #000;
+}
+@media (max-width: 576px) {
+    .label {
+        width: 100px;
+        font-size: 12px;
+    }
+    .value {
+        right: -20px;
+        font-size: 12px;
+    }
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Footer*/
+.footer {
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.preloader {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background-color: white;
+}
+
+.loading {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}

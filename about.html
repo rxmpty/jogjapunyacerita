@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About US</title>
+    <link rel="icon" href="https://img.freepik.com/premium-vector/tugu-jogja-vector-icon-illustration_96786-45.jpg">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loading">
+            <img src="loading_data.gif">
+        </div>
+    </div>
+    <img src="yogya.jpg" alt="" id="background-img">
+    <!-- Navigasi -->
+    <div class="main">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link about-me" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tempat Wisata
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="candi.html">Wisata Candi</a>
+                            <a class="dropdown-item" href="hits.html">Wisata Hits</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="kuliner.html">Kuliner</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>Selamat Datang di Wisata Yogyakarta</h1>
+            <p>Kami memperkenalkan keindahan Yogyakarta dan budaya kepada dunia.</p>
+        </div>
+        
+        <!-- Konten -->
+        <div id="home" class="container mt-5">
+            <h2 class="text-center">Visi dan Misi</h2>
+            <p class="text-center">Visi kami adalah menjadi platform terkemuka untuk wisatawan yang ingin menjelajahi keindahan Yogyakarta. Misi kami adalah memberikan informasi yang akurat dan bermanfaat tentang destinasi wisata, budaya, dan pengalaman lokal.</p>
+            <h2 class="text-center mb-4">Tim Kami</h2>
+        <div class="row">
+            <div class="col-md-3 text-center team-member">
+                <img src="team.jpg" alt="Anggota Tim 1">
+                <h5>Daud Richardo Siagian</h5>
+                <p>247000662</p>
+            </div>
+            <div class="col-md-3 text-center team-member">
+                <img src="https://via.placeholder.com/150" alt="Anggota Tim 2">
+                <h5>Eloise Samangun</h5>
+                <p>230515102</p>
+            </div>
+            <div class="col-md-3 text-center team-member">
+                <img src="team2.jpg" alt="Anggota Tim 3">
+                <h5>Louise Clarissa Vivien Anggara</h5>
+                <p>240515757</p>
+            </div>
+            <div class="col-md-3 text-center team-member">
+                <img src="https://via.placeholder.com/150" alt="Anggota Tim 3">
+                <h5>Serafim Yemima Putri</h5>
+                <p>230515119</p>
+            </div>
+            <div class="col-md-3 text-center team-member">
+                <img src="team3.jpg" alt="Anggota Tim 3">
+                <h5>Zabrina Adebelina</h5>
+                <p>210514392</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--  -->
+    <footer class="footer fixed-bottom text-center">
+        <div class="contain">
+            <span class="footer-link">© 2024 Wisata Yogyakarta. Semua hak dilindungi.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartContainer = document.getElementById('chartContainer');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        chartContainer.classList.add('visible');
+                        observer.unobserve(chartContainer);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(chartContainer);
+        });
+    </script>
+    <script>
+        // Mengubah warna navbar dan footer saat digulir
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            const footer = document.querySelector('footer');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                footer.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+                footer.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.preloader').delay('500').fadeOut();
+        });
+    </script>
+</body>
+
+</html>
